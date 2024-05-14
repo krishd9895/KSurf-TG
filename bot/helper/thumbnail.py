@@ -3,7 +3,7 @@ from bot import LOGGER
 from bot.telegram import StreamBot
 
 image_cache = {}
-path = ospath.join('bot/server/static', 'thumbnail.jpg')
+path = ospath.join('bot/server', 'thumbnail.jpg')
 
 async def get_image(chat_id, message_id):
     global image_cache
