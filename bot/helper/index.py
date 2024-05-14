@@ -10,7 +10,7 @@ async def get_files(chat_id, page=1):
             return cache
     posts = []
     async for post in UserBot.get_chat_history(chat_id=int(chat_id), limit=50, offset=(int(page) - 1) * 50):
-        file = post.video or post.document or post.audio
+        file = post.video or post.document
         if not file:
             continue
         title = file.file_name or post.caption or file.file_id
